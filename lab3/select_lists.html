@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Раскрывающиеся списки</title>
+</head>
+<body>
+    <h4>Без атрибутов size и multiple:</h4>
+    <select>
+        <option>ВДИСУВД</option>
+        <option>КС</option>
+        <option selected>ПССИП</option>
+        <option>ППО</option>
+    </select>
+
+    <h4>С атрибутом multiple (без size):</h4>
+    <select multiple>
+        <option>ВДИСУВД</option>
+        <option>КС</option>
+        <option selected>ПССИП</option>
+        <option>ППО</option>
+    </select>
+
+    <h4>С атрибутами size и multiple и группировкой:</h4>
+    <select multiple size="4">
+        <optgroup label="Спец.дисциплины">
+            <option>ВДИСУВД</option>
+            <option>КС</option>
+            <option selected>ПССИП</option>
+        </optgroup>
+        <optgroup label="Доп.дисциплины">
+            <option>ППО</option>
+            <option>Проф.лексика</option>
+        </optgroup>
+    </select>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Селекторы класса</title>
+    <style>
+        .menu {
+            text-decoration: none; /* отмена подчеркивания */
+        }
+        li.under {
+            border: 1px solid aqua;
+            border-radius: 30px; /* скругление углов обрамления */
+            text-shadow: 1px 1px 2px black, 0 0 1em blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">селектор тега</a> &nbsp;
+    <a href="#" class="menu">селектор класса</a>
+    <ul>
+        <li class="under">селектор универсальный</li>
+        <li>селектор атрибута</li>
+    </ul>
+    <ol>
+        <li class="under">селектор класса</li>
+        <li>селектор идентификатора</li>
+    </ol>
+    <p>Есть элементы, которые в браузере выглядят <span class="menu">подчеркнутыми</span>.</p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* Внешняя таблица стилей, в которую импортирован файл 'zad8_1_str120-121.css' */
+@import url("zad8_1_str120-121.css");
+
+p {
+    font: 20 Garamond;
+}
+
+span {
+    font: 26px Arial;
+    color: blue;
+}

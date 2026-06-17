@@ -1,0 +1,30 @@
+/* Внешняя таблица стилей из учебника [1, 119] */
+p { 
+    font: 20 Garamond; 
+}
+span { 
+    font: 26px Arial; 
+    color: blue; 
+}
+
+/* Дополнительные стили для наглядности */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #e8f0fe 0%, #d4e4f7 100%);
+    margin: 30px;
+    padding: 20px;
+}
+
+h1 {
+    color: #1a5276;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.highlight {
+    color: #e67e22;
+    font-weight: bold;
+    font-style: italic;
+}

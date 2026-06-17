@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивное меню</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+             
+            padding: 20px;
+        }
+
+        /* МЕНЮ */
+        nav {
+            background: #2c3e50;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu > li {
+            position: relative;
+        }
+
+        .menu > li > a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu > li > a:hover {
+            background: #34495e;
+        }
+
+        /* ПОДМЕНЮ */
+        .submenu {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 150px;
+            background: #34495e;
+            padding: 0;
+
+            /* Плавное появление */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+м
+        .submenu li a:hover {
+            background: #2c3e50;
+        }
+
+        .menu > li:hover > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* АДАПТИВНОСТЬ: УЗКИЙ ЭКРАН */
+        @media all and (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+            }
+
+            .menu > li {
+                width: 100%;
+            }
+
+            .submenu {
+                position: absolute;
+                top: 0;
+                left: 100%;
+            }
+        }
+
+        /* ДНИ НЕДЕЛИ */
+        .days {
+            margin-top: 30px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .days span {
+            display: inline-block;
+            background: #3498db;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li>
+                <a href="#">О нас</a>
+                <ul class="submenu">
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Услуги</a>
+                <ul class="submenu">
+                    <li><a href="#">Веб-разработка</a></li>
+                    <li><a href="#">Дизайн</a></li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- ДНИ НЕДЕЛИ ДЛЯ ОПРЕДЕЛЕНИЯ ТОЧКИ ПЕРЕХОДА -->
+    <div class="days">
+        <p><strong>Дни недели (точка перехода, когда не помещаются):</strong></p>
+        <span>ПН</span>
+        <span>ВТ</span>
+        <span>СР</span>
+        <span>ЧТ</span>
+        <span>ПТ</span>
+        <span>СБ</span>
+        <span>ВС</span>
+    </div>
+
+</body>
+</html>
