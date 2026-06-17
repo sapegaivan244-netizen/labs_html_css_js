@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Declaration</title>
+    <script>
+        // Функция без параметров
+        function sayHello() {
+            alert("Привет!");
+        }
+
+        // Функция с параметрами
+        function showMessage(from, text) {
+            alert(from + ': ' + text);
+        }
+
+        // Функция с параметром по умолчанию
+        function showMess(from, text) {
+            if (text === undefined) text = 'текст не передан';
+            alert(from + ': ' + text);
+        }
+
+        // Функция с возвратом значения
+        function D(a, b, c) {
+            let d = b * b - 4 * a * c;
+            if (d > 0) return "2 корня: D=" + d;
+            else if (d == 0) return "1 корень";
+            else return "корней нет";
+        }
+
+        // Вызовы функций
+        sayHello();
+        showMessage('Маша', 'Привет!');
+        showMessage('Саша', 'Как дела?');
+        showMess("Маша", "Привет!");
+        showMess("Саша");
+        document.write(D(-4, 2, 1) + "<br>");
+        document.write(D(1, 2, 3) + "<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>

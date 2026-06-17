@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Цепочка областей видимости</title>
+    <script>
+        let a = 'global';
+
+        function outer() {
+            let b = 'outer';
+
+            function inner() {
+                let c = 'inner';
+                alert(c); // 'inner' - 3
+                alert(b); // 'outer' - 4
+                alert(a); // 'global' - 5
+            }
+
+            alert(a); // 'global' - 1
+            alert(b); // 'outer' - 2
+            inner();
+        }
+
+        outer();
+        alert(a); // 'global' - 6
+    </script>
+</head>
+<body>
+</body>
+</html>

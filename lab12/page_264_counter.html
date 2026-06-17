@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Замыкание. Счетчик</title>
+    <script>
+        function makeCounter() {
+            let count = 0;
+            return function() {
+                return count++;
+            };
+        }
+
+        let counter1 = makeCounter();
+        document.write(counter1() + "<br>"); // 0
+        document.write(counter1() + "<br>"); // 1
+        document.write(counter1() + "<br>"); // 2
+
+        let counter2 = makeCounter();
+        document.write(counter2() + "<br>"); // 0 (независимый счетчик)
+    </script>
+</head>
+<body>
+</body>
+</html>

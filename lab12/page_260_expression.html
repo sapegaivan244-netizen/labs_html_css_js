@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Expression</title>
+    <script>
+        // Function Expression
+        let sayHello = function() {
+            alert("Привет!");
+        };
+
+        // Вызов функции
+        sayHello();
+
+        // Копирование функции в другую переменную
+        let f = sayHello;
+        alert(f); // выведет код функции
+        f(); // выведет Привет!
+
+        // Если написать с круглыми скобками - результат вызова
+        // let f2 = sayHello(); // в f2 запишется undefined
+    </script>
+</head>
+<body>
+</body>
+</html>

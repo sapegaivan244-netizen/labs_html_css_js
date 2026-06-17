@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Замыкание</title>
+    <script>
+        function person() {
+            let name = 'Саша';
+            return function showName() {
+                alert(name);
+            };
+        }
+
+        let sasha = person();
+        sasha(); // 'Саша'
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Время суток</title>
+</head>
+<body>
+    <script>
+        var theTime = new Date();
+        var theHour = theTime.getHours();
+        if (18 > theHour) {
+            document.write("<body bgcolor=white text='Black'>");
+        } else {
+            document.write("<body bgcolor=black text='White'>");
+        }
+    </script>
+</body>
+</html>

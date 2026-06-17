@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Идущие часы</title>
+    <script>
+        var ch = 1, m = 2, s = 3;
+
+        function clock() {
+            var now = new Date();
+            ch = now.getHours();
+            m = now.getMinutes();
+            s = now.getSeconds();
+            window.document.forms[0].elements[0].value = ch + " : " + m + " : " + s;
+            setTimeout("clock()", 1000);
+        }
+    </script>
+</head>
+<body onLoad="clock()">
+    <form name="form1">
+        <input type="text" size="20">
+    </form>
+</body>
+</html>

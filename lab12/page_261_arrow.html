@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Стрелочные функции</title>
+    <script>
+        // Стрелочная функция с двумя аргументами
+        let func = (arg1, arg2) => arg1 + arg2;
+        alert(func(2, 3));
+
+        // Стрелочная функция с одним аргументом (без скобок)
+        let double = n => n * 2;
+        alert(double(5));
+
+        // Стрелочная функция без аргументов
+        let greet = () => alert("Hello!");
+        greet();
+
+        // Стрелочная функция с многострочным телом
+        let sum = (a, b) => {
+            let result = a + b;
+            return result;
+        };
+        alert(sum(4, 6));
+    </script>
+</head>
+<body>
+</body>
+</html>

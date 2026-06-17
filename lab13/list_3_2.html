@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Площадь круга с округлением</title>
+    <script>
+        function square(n) {
+            return n * n;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write("<table border='1' width='600'><tr><th>число</th><th>площадь круга</th></tr>");
+        for (var i = 0; i < 10; i++) {
+            var area = square(i) * Math.PI;
+            area = Math.round(area * 100) / 100;
+            document.write("<tr><th>" + i + "</th><th>" + area + "</th></tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

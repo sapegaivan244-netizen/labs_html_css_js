@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Замена буквы "а" на "б"</title>
+</head>
+<body>
+    <p>Введите текст:</p>
+    <input type="text" id="inputText" size="50" value="Мама мыла раму">
+    <br><br>
+    <button onclick="replaceAtoB()">Заменить "а" на "б"</button>
+    <br><br>
+    <p>Результат:</p>
+    <input type="text" id="resultText" size="50" readonly>
+
+    <script>
+        function replaceAtoB() {
+            var text = document.getElementById('inputText').value;
+            var result = text.replace(/а/gi, 'б');
+            document.getElementById('resultText').value = result;
+        }
+    </script>
+</body>
+</html>

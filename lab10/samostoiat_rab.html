@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Обратный отсчет</title>
+</head>
+<body>
+    <input type="number" id="seconds" placeholder="Введите секунды">
+    <button id="startBtn">Запустить отсчет</button>
+
+
+
+
+    <p id="display">0</p>
+
+
+
+
+
+    <script>
+        var input = document.getElementById('seconds');
+        
+        var btn = document.getElementById('startBtn');
+
+        var display = document.getElementById('display');
+
+
+
+
+
+        var timer = null;
+
+        btn.onclick = function() {
+            if (timer !== null) {
+
+
+                clearInterval(timer);
+                timer = null;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var count = parseInt(input.value);
+
+            if (isNaN(count) || count < 0) {
+                alert('Введите положительное число');
+                return;
+            }
+
+            display.textContent = count;
+
+            timer = setInterval(function() {
+                count--;
+                display.textContent = count;
+
+                if (count <= 0) {
+                    clearInterval(timer);
+                    timer = null;
+
+                    display.textContent = '0';
+                }
+            }, 1000);
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>

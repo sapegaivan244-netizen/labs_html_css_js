@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 15px;
+            line-height: 150px;
+            font-size: 28px;
+            text-align: center;
+        }
+        .box-1 {
+            transform: rotate(45deg);
+        }
+        .box-2 {
+            transform: rotateY(45deg);
+        }
+        .box-3 {
+            transform: scale(0.5);
+        }
+        .box-4 {
+            transform: translate(100px, 30px);
+        }
+        .box-5 {
+            transform: skew(25deg, 10deg);
+        }
+        .box-6 {
+            transition: all 0.2s ease-in-out;
+        }
+        .box-6:hover {
+            transform: scale(1.05);
+        }
+
+        .frame {
+            width: 250px;
+        }
+        .frame h3 {
+            text-align: center;
+            height: 75px;
+            line-height: 75px;
+            border: 1px solid black;
+            margin-bottom: 0;
+        }
+        .frame .img {
+            height: 0;
+            transition: height 0.6s;
+        }
+        .monkey {
+            background-image: url(images/monkey.jpg);
+            background-size: cover;
+        }
+        .avatar {
+            background-image: url(images/avatar-small.png);
+            background-size: cover;
+        }
+        .frame h3:hover + .img {
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">Rotate</div>
+        <div class="box box-2">RotateY</div>
+        <div class="box box-3">Scale</div>
+        <div class="box box-4">Translate</div>
+        <div class="box box-5">Skew</div>
+        <div class="box box-6">Transition</div>
+    </div>
+
+    <div class="container">
+        <div class="frame">
+            <h3>Monkey</h3>
+            <div class="img monkey"></div>
+        </div>
+        <div class="frame">
+            <h3>Avatar</h3>
+            <div class="img avatar"></div>
+        </div>
+    </div>
+</body>
+</html>

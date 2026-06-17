@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 15px;
+            line-height: 150px;
+            font-size: 28px;
+            text-align: center;
+        }
+        .box-1 {
+            transform: rotate(45deg);
+        }
+        .box-2 {
+            transform: rotateY(45deg);
+        }
+        .box-3 {
+            transform: scale(2.5);
+        }
+        .box-4 {
+            transform: translate(100px, 30px);
+        }
+        .box-5 {
+            transform: skew(25deg, 10deg);
+        }
+        .box-6 {
+            transition: all 2s ease-in-out 0.2s;
+        }
+        .box-6:hover {
+            width: 300px;
+            background-color: red;
+            transform: rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">Rotate</div>
+        <div class="box box-2">RotateY</div>
+        <div class="box box-3">Scale</div>
+        <div class="box box-4">Translate</div>
+        <div class="box box-5">Skew</div>
+        <div class="box box-6">Transition</div>
+    </div>
+</body>
+</html>

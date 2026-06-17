@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Встроенные функции</title>
+</head>
+<body>
+    <script>
+        // escape - кодирует строку
+        document.write(escape('& * @ + /,') + "<br>");
+
+        // eval - вычисляет выражение
+        document.write(eval('2+2') + "<br>");
+
+        // isFinite - проверяет, является ли число конечным
+        document.write(isFinite(10/3) + "<br>");
+
+        // isNaN - проверяет, является ли значение NaN
+        document.write(isNaN(10+3) + "<br>");
+
+        // parseInt - преобразует строку в целое число
+        document.write(parseInt('15px') + "<br>");
+        document.write(parseInt('15', 10) + "<br>");
+
+        // parseFloat - преобразует строку в число с плавающей точкой
+        document.write(parseFloat('15.5px') + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создание и заполнение массивов</title>
+</head>
+<body>
+    <script>
+        // Обычный синтаксис
+        let arr1 = [1, 2, 3];
+        document.write("arr1: " + arr1 + "<br>");
+
+        // Синтаксис с new Array()
+        let arr2 = new Array("красный", "желтый", "зеленый");
+        document.write("arr2: " + arr2 + "<br>");
+
+        // new Array с одним числом - создает массив заданной длины
+        let arr3 = new Array(10);
+        document.write("arr3.length: " + arr3.length + "<br>");
+
+        // Создание массива и инициализация по индексам
+        let arr4 = new Array();
+        arr4[5] = 15;
+        document.write("arr4[5]: " + arr4[5] + "<br>");
+
+        // Многомерный массив
+        let arr5 = new Array();
+        arr5[0] = [15, "текст", false];
+        arr5[2] = [true, 0, "привет"];
+        document.write("arr5[0][1]: " + arr5[0][1] + "<br>");
+
+        // Многомерный массив (другой способ)
+        let arr6 = [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6], [3, 4, 5, 6, 7]];
+        document.write("arr6[1][2]: " + arr6[1][2] + "<br>");
+    </script>
+</body>
+</html>

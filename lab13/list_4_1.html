@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Движущийся текст</title>
+    <script>
+        var scrtxt = "Мы на многае не адважаемся не таму, што яно складанае; " +
+                      "яно складанае менавіта таму, што мы на яго не адважаемся. " +
+                      "(Сенека) " +
+                      "Недастаткова, каб выхаванне толькi не псавала нас, " +
+                      "трэба, каб яно мяняла нас у лепшы бок. " +
+                      "(Мiшэль дэ Мантэнь)";
+
+        var _length = scrtxt.length;
+        var _width = 60;
+        var pos = -(_width + 2);
+
+        function scroll() {
+            pos++;
+            var scroller = "";
+
+            if (pos == _length) {
+                pos = -(_width + 2);
+            }
+
+            if (pos < 0) {
+                for (var i = 1; i <= Math.abs(pos); i++) {
+                    scroller = " " + scroller;
+                }
+                scroller = scrtxt.substring(0, _width - i + 1) + scroller;
+            } else {
+                if (pos + _width < _length) {
+                    scroller = scrtxt.substring(pos, pos + _width);
+                } else {
+                    scroller = scrtxt.substring(pos, _length);
+                }
+            }
+
+            document.forms[0].elements[0].value = scroller;
+            setTimeout("scroll()", 200);
+        }
+    </script>
+</head>
+<body onLoad="scroll()">
+    <form name="form1">
+        <input type="text" size="60">
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Функции</title>
+    <style>
+        div {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function f1(obj) {
+            let color = obj.style.backgroundColor;
+            obj.style.border = "3px white dashed";
+            document.bgColor = color;
+        }
+
+        function f2(obj, color) {
+            obj.style.backgroundColor = 'white';
+            obj.style.border = "5px " + color + " dotted";
+            document.bgColor = 'white';
+        }
+    </script>
+</head>
+<body>
+    <div style="background-color: lime;" onMouseOver="f1(this);" onMouseOut="f2(this, 'lime');"></div>
+    <div style="background-color: red;" onMouseOver="f1(this);" onMouseOut="f2(this, 'red');"></div>
+    <div style="background-color: aqua;" onMouseOver="f1(this);" onMouseOut="f2(this, 'aqua');"></div>
+</body>
+</html>

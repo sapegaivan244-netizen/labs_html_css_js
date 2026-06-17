@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Видимость переменных</title>
+    <script>
+        // Глобальная переменная
+        let user = 'Саша';
+
+        function showMess() {
+            // Доступ к глобальной переменной (изменение)
+            user = 'Маша';
+            // Локальная переменная
+            let message = 'Привет, я ' + user;
+            alert(message);
+        }
+
+        alert('До вызова: ' + user);
+        showMess();
+        alert('После вызова: ' + user);
+
+        // Локальная переменная недоступна вне функции
+        // alert(message); // ошибка
+    </script>
+</head>
+<body>
+</body>
+</html>

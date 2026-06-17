@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Объект Array</title>
+</head>
+<body>
+    <script>
+        // concat() - соединяет элементы массивов
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 5, 6];
+        var arr3 = arr1.concat(arr2);
+        document.write("concat: " + arr3 + "<br>");
+
+        // join() - соединяет все элементы в строку
+        var arr = ["Hello", "World"];
+        document.write("join: " + arr.join(" ") + "<br>");
+
+        // push() - добавляет элементы в конец
+        arr.push("!");
+        document.write("push: " + arr + "<br>");
+
+        // pop() - удаляет последний элемент
+        var last = arr.pop();
+        document.write("pop: " + last + ", массив: " + arr + "<br>");
+
+        // reverse() - изменяет порядок элементов
+        arr.reverse();
+        document.write("reverse: " + arr + "<br>");
+
+        // shift() - удаляет первый элемент
+        var first = arr.shift();
+        document.write("shift: " + first + ", массив: " + arr + "<br>");
+
+        // slice() - возвращает часть массива
+        var arr4 = [1, 2, 3, 4, 5];
+        var part = arr4.slice(1, 3);
+        document.write("slice(1,3): " + part + "<br>");
+
+        // sort() - сортирует массив
+        var unsorted = [3, 1, 4, 2, 5];
+        unsorted.sort();
+        document.write("sort: " + unsorted + "<br>");
+
+        // toString() - преобразует в строку
+        document.write("toString: " + arr4.toString() + "<br>");
+    </script>
+</body>
+</html>

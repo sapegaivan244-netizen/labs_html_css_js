@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>скрипт в контейнере</title>
+    <script type='text/javascript'>
+        alert('появилось окно-сообщение при загрузке веб-документа');
+    </script>
+</head>
+<body>
+    <script type='text/javascript'>
+        function f1() {
+            alert('появилось окно-сообщение при событии, вызванном пользователем');
+        }
+    </script>
+    <h1 onClick="f1();">внедренные сценарии</h1>
+    <h2 onMouseOver="f1();">в контейнере &lt;script&gt;</h2>
+</body>
+</html>
